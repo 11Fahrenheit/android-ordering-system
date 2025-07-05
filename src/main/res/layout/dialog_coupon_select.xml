@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvCouponTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="检测到您有优惠券，是否使用？"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <CheckBox
+        android:id="@+id/cbCoupon5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用5元优惠券" />
+
+    <CheckBox
+        android:id="@+id/cbCoupon10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用10元优惠券" />
+
+    <Button
+        android:id="@+id/btnConfirmCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="结算"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#e23e57"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>

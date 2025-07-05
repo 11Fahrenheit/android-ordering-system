@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 购物车列表 -->
+    <ScrollView
+        android:id="@+id/scrollCart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomBar">
+
+        <LinearLayout
+            android:id="@+id/cartItemContainer"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+            <!-- 动态添加菜品项 -->
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部结算栏 -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:elevation="4dp">
+
+        <!-- 总数量 -->
+        <TextView
+            android:id="@+id/tvTotalItems"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="共 0 件"
+            android:textSize="16sp" />
+
+        <!-- 总价格 -->
+        <TextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="合计：¥0.00"
+            android:textSize="16sp"
+            android:textColor="#e23e57"
+            android:textStyle="bold" />
+
+        <!-- 结算按钮 -->
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="结算"
+            android:backgroundTint="#e23e57"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:paddingLeft="16dp"
+            android:minHeight="48dp"
+            android:paddingRight="16dp" />
+    </LinearLayout>
+</RelativeLayout>

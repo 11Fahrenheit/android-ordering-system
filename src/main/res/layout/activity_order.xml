@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_order"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#e23e57"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="订单列表"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/ic_back" />
+
+    <!-- 订单信息项 -->
+    <LinearLayout
+        android:id="@+id/layout_order_item"
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_coupon_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- 左边订单图片 -->
+        <ImageView
+            android:id="@+id/img_order"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="16dp"
+            android:contentDescription="订单图片"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_order" />
+
+        <!-- 中间描述 + 右下角金额（使用RelativeLayout容器） -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <!-- 订单描述 -->
+            <TextView
+                android:id="@+id/tv_order_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="宫保鸡丁*1、酸菜鱼*1、可乐*2"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+            <!-- 实付款 -->
+            <TextView
+                android:id="@+id/tv_order_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:text="实付：¥253"
+                android:textColor="#FF5722"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 无订单提示 -->
+    <TextView
+        android:id="@+id/tv_no_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="目前暂无订单"
+        android:textColor="#888888"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:visibility="gone" />
+</LinearLayout>
