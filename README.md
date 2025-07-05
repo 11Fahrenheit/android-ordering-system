@@ -1,6 +1,7 @@
 # Android Ordering System
 
 Android Studio版本：Meerkat
+
 这是一个用于餐厅点餐的 Android 应用，支持菜单浏览、菜品选择、下单管理等功能，适用于小型餐饮场景或学习实践用途。
 
 ## 功能特性
